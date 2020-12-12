@@ -1,0 +1,16 @@
+/*
+    Platters green #34cb3b
+    Platters Red #eb1b23
+    Neutral white #F6F7F3
+    Light red #F95C64
+*/
+
+body {
+    background-color: #F6F7F3;
+    color: #34cb3b;
+}
+
+.centering-container {
+    width: auto;
+    text-align: center;
+}
