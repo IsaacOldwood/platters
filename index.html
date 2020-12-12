@@ -11,6 +11,35 @@
         <meta name = "revised" content = "Platters, 12/12/2020" />
         <meta name = "author" content = "Isaac Oldwood" />
         <!-- META TAGS-->
+        <!--JS-->
+        <script>
+            function showHideAll(menu) {
+                var x = document.getElementById(menu);
+                x.style.display = "block";
+                var menus = ['traditional', 'chicken', 'maritime', 'paninis']
+                for (index = 0; index < menus.length; ++index) {
+                    if (menus[index] == menu) {
+                        show(menus[index]);
+                    } else {
+                        hide(menus[index]);
+                    }
+                }
+            }
+
+            function show(menu) {
+                var x = document.getElementById(menu);
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                }
+            }
+            function hide(menu) {
+                var x = document.getElementById(menu);
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                }
+            }
+          </script>
+          <!--JS-->
 	</head>
 	<body>
         <div class="centering-container">
@@ -177,32 +206,5 @@
             <p class="opening-times"><b>Opening Times:</b> &nbsp; Monday & Tuesday: 9am - 3pm &nbsp; &nbsp; Wednesday, Thursday & Friday: 9:30am - 3:30pm &nbsp; &nbsp;
                 Saturday: 9:30am - 2:45pm &nbsp; &nbsp; Sunday: Closed</p>
         </div>
-        <script>
-            function showHideAll(menu) {
-                var x = document.getElementById(menu);
-                x.style.display = "block";
-                var menus = ['traditional', 'chicken', 'maritime', 'paninis']
-                for (index = 0; index < menus.length; ++index) {
-                    if (menus[index] == menu) {
-                        show(menus[index]);
-                    } else {
-                        hide(menus[index]);
-                    }
-                }
-            }
-
-            function show(menu) {
-                var x = document.getElementById(menu);
-                if (x.style.display === "none") {
-                    x.style.display = "block";
-                }
-            }
-            function hide(menu) {
-                var x = document.getElementById(menu);
-                if (x.style.display === "block") {
-                    x.style.display = "none";
-                }
-            }
-          </script>
 	</body>
 </html><!-- Coded By Isaac Oldwood https://isaacoldwood.github.io/ -->
