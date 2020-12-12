@@ -18,5 +18,191 @@
                 <img alt="Logo" src="logo.png">
             </a>
         </div>
+        <br>
+        <div class="centering-container">
+            <div class="menu-buttons">
+                <button class="myButton" onclick="showHideAll('traditional')">Traditional</button>
+                <button class="myButton" onclick="showHideAll('chicken')">Chicken</button>
+                <button class="myButton" onclick="showHideAll('maritime')">Maritime</button>
+                <button class="myButton">Cheeseboard</button>
+                <button class="myButton">House Specials</button>
+                <button class="myButton">Veggie</button>
+                <button class="myButton">Vegan</button>
+                <button class="myButton">Shapers</button>
+                <button class="myButton" onclick="showHideAll('paninis')">Paninis</button>
+                <button class="myButton">Jackets</button>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="centering-container">
+            <div class="traditional" id="traditional">
+                <h2 class="menu-title"><u>Traditional</u></h2>
+                <table class="menu-table">
+                    <tr>
+                      <th>Filling</th>
+                      <th>Sandwich</th>
+                      <th>Baguette</th>
+                      <th>Eat In</th>
+                    </tr>
+                    <tr>
+                      <td>Bacon</td>
+                      <td>£2.55</td>
+                      <td>£3.45</td>
+                      <td>£4.45</td>
+                    </tr>
+                    <tr>
+                      <td>Sausage</td>
+                      <td>£2.35</td>
+                      <td>£3.25</td>
+                      <td>£4.25</td>
+                    </tr>
+                    <tr>
+                      <td>BLT</td>
+                      <td>£2.65</td>
+                      <td>£3.65</td>
+                      <td>£4.65</td>
+                      </tr>
+                  </table>
+            </div>
+            <div class="chicken default-hidden" id='chicken'>
+                <h2 class="menu-title"><u>Chicken</u></h2>
+                <table class="menu-table">
+                    <tr>
+                      <th>Filling</th>
+                      <th>Sandwich</th>
+                      <th>Baguette</th>
+                      <th>Eat In</th>
+                    </tr>
+                    <tr>
+                      <td>Chicken Mayo</td>
+                      <td>£2.65</td>
+                      <td>£3.70</td>
+                      <td>£4.70</td>
+                    </tr>
+                    <tr>
+                      <td>Chicken Mexican</td>
+                      <td>£2.65</td>
+                      <td>£3.70</td>
+                      <td>£4.70</td>
+                    </tr>
+                    <tr>
+                      <td>Chicken Indian</td>
+                      <td>£2.65</td>
+                      <td>£3.70</td>
+                      <td>£4.70</td>
+                      </tr>
+                  </table>
+            </div>
+            <div class="maritime default-hidden" id='maritime'>
+                <h2 class="menu-title"><u>Maritime</u></h2>
+                <table class="menu-table">
+                    <tr>
+                      <th>Filling</th>
+                      <th>Sandwich</th>
+                      <th>Baguette</th>
+                      <th>Eat In</th>
+                    </tr>
+                    <tr>
+                      <td>Tuna Mayo & Cucumber</td>
+                      <td>£2.45</td>
+                      <td>£3.35</td>
+                      <td>£4.35</td>
+                    </tr>
+                    <tr>
+                      <td>Seafood Cocktail</td>
+                      <td>£2.55</td>
+                      <td>£3.45</td>
+                      <td>£4.40</td>
+                    </tr>
+                    <tr>
+                      <td>Prawns in Marie Rose Sauce</td>
+                      <td>£3.20</td>
+                      <td>£4.05</td>
+                      <td>£5.05</td>
+                      </tr>
+                  </table>
+            </div>
+            <div class="paninis default-hidden" id='paninis'>
+                <h2 class="menu-title"><u>Paninis</u></h2>
+                <table class="menu-table">
+                    <tr>
+                      <th>Filling</th>
+                      <th>Take Away</th>
+                      <th>Eat In</th>
+                    </tr>
+                    <tr>
+                      <td>Brie & Bacon</td>
+                      <td>£4.15</td>
+                      <td>£5.15</td>
+                    </tr>
+                    <tr>
+                      <td>Cheese & Tomato</td>
+                      <td>£3.40</td>
+                      <td>£4.40</td>
+                    </tr>
+                    <tr>
+                      <td>Ham & Cheese</td>
+                      <td>£3.90</td>
+                      <td>£4.90</td>
+                      </tr>
+                  </table>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="centering-container">
+            <h2 class="contact-us-title"><u>Contact Us</u></h2>
+            <table class="contact-us-table">
+                <tr>
+                  <th>Address</th>
+                  <th>Phone</th>
+                </tr>
+                <tr>
+                  <td>35A High Street,</td>
+                  <td>01480 435535</td>
+                </tr>
+                <tr>
+                  <td>Huntingdon,</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>PE29 3AQ</td>
+                  <td></td>
+                </tr>
+              </table>
+        </div>
+        <br>
+        <div class="centering-container">
+            <p class="opening-times"><b>Opening Times:</b> &nbsp; Monday & Tuesday: 9am - 3pm &nbsp; &nbsp; Wednesday, Thursday & Friday: 9:30am - 3:30pm &nbsp; &nbsp;
+                Saturday: 9:30am - 2:45pm &nbsp; &nbsp; Sunday: Closed</p>
+        </div>
+        <script>
+            function showHideAll(menu) {
+                var x = document.getElementById(menu);
+                x.style.display = "block";
+                var menus = ['traditional', 'chicken', 'maritime', 'paninis']
+                for (index = 0; index < menus.length; ++index) {
+                    if (menus[index] == menu) {
+                        show(menus[index]);
+                    } else {
+                        hide(menus[index]);
+                    }
+                }
+            }
+
+            function show(menu) {
+                var x = document.getElementById(menu);
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                }
+            }
+            function hide(menu) {
+                var x = document.getElementById(menu);
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                }
+            }
+          </script>
 	</body>
 </html><!-- Coded By Isaac Oldwood https://isaacoldwood.github.io/ -->

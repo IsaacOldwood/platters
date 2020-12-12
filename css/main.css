@@ -8,9 +8,82 @@
 body {
     background-color: #F6F7F3;
     color: #34cb3b;
+    font-family: Georgia, serif;
+    font-size: 15px;
 }
 
 .centering-container {
-    width: auto;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
+}
+
+.menu-buttons {
+    display: inline-block;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.menu-title {
+    font-size: 3em;
+}
+
+.menu-table { 
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2em;
+}
+
+td, th {
+    padding: 2px 5px 2px 5px;
+}
+
+.contact-us-title {
+    font-size: 2.2em;
+}
+
+.contact-us-table {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.7em;
+}
+
+.contact-us-table td, .contact-us-table th {
+    padding: 2px 17px 2px 17px;
+}
+
+.opening-times { 
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.5em;
+}
+
+
+.default-hidden {
+    display: none;
+}
+
+.myButton {
+	background-color:#eb1b22;
+	border-radius:13px;
+	display:inline-block;
+	cursor:pointer;
+	color:#34cb3b;
+	font-family: Georgia, serif;
+    font-size:20px;
+    font-weight:bold;
+	padding:16px 21px;
+    text-decoration:none;
+    display: inline-block;
+}
+.myButton:hover {
+    background-color:#34cb3b;
+    color:#eb1b22;
+}
+.myButton:active {
+	position:relative;
+    top:1px;
+
 }
