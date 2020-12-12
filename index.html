@@ -14,9 +14,14 @@
         <!--JS-->
         <script>
             function showHideAll(menu) {
+                var menuText = document.getElementById('hello');
+                if (menuText.style.display != "none") {
+                    menuText.style.display = "none";
+                }
+
                 var x = document.getElementById(menu);
                 x.style.display = "block";
-                var menus = ['traditional', 'chicken', 'maritime', 'paninis']
+                var menus = ['traditional', 'chicken', 'maritime', 'cheeseboard', 'house-specials', 'paninis', 'jackets', 'veggie', 'vegan', 'shapers', 'drinks']
                 for (index = 0; index < menus.length; ++index) {
                     if (menus[index] == menu) {
                         show(menus[index]);
@@ -56,19 +61,25 @@
                 <button class="myButton" onclick="showHideAll('traditional')">Traditional</button>
                 <button class="myButton" onclick="showHideAll('chicken')">Chicken</button>
                 <button class="myButton" onclick="showHideAll('maritime')">Maritime</button>
-                <button class="myButton">Cheeseboard</button>
-                <button class="myButton">House Specials</button>
-                <button class="myButton">Veggie</button>
-                <button class="myButton">Vegan</button>
-                <button class="myButton">Shapers</button>
+                <button class="myButton" onclick="showHideAll('cheeseboard')">Cheeseboard</button>
+                <button class="myButton" onclick="showHideAll('house-specials')">House Specials</button>
+                <button class="myButton" onclick="showHideAll('veggie')">Veggie</button>
+                <button class="myButton" onclick="showHideAll('vegan')">Vegan</button>
+                <button class="myButton" onclick="showHideAll('shapers')">Shapers</button>
                 <button class="myButton" onclick="showHideAll('paninis')">Paninis</button>
-                <button class="myButton">Jackets</button>
+                <button class="myButton" onclick="showHideAll('jackets')">Jackets</button>
+                <button class="myButton" onclick="showHideAll('drinks')">Drinks</button>
             </div>
         </div>
         <br>
         <br>
         <div class="centering-container">
-            <div class="traditional" id="traditional">
+          <div class="hello" id="hello">
+            <h2 class="menu-title">Please Select a Menu</h2>
+          </div>
+        </div>
+        <div class="centering-container">
+            <div class="traditional default-hidden" id="traditional">
                 <h2 class="menu-title"><u>Traditional</u></h2>
                 <table class="menu-table">
                     <tr>
@@ -94,6 +105,12 @@
                       <td>£2.65</td>
                       <td>£3.65</td>
                       <td>£4.65</td>
+                      </tr>
+                      <tr>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
                       </tr>
                   </table>
             </div>
@@ -124,6 +141,12 @@
                       <td>£3.70</td>
                       <td>£4.70</td>
                       </tr>
+                      <tr>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                      </tr>
                   </table>
             </div>
             <div class="maritime default-hidden" id='maritime'>
@@ -153,8 +176,132 @@
                       <td>£4.05</td>
                       <td>£5.05</td>
                       </tr>
+                      <tr>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                      </tr>
                   </table>
             </div>
+            <div class="cheeseboard default-hidden" id='cheeseboard'>
+              <h2 class="menu-title"><u>Cheeseboard</u></h2>
+              <table class="menu-table">
+                  <tr>
+                    <th>Filling</th>
+                    <th>Sandwich</th>
+                    <th>Baguette</th>
+                    <th>Eat In</th>
+                  </tr>
+                  <tr>
+                    <td>Mild Cheddar</td>
+                    <td>£2.45</td>
+                    <td>£3.35</td>
+                    <td>£4.35</td>
+                  </tr>
+                  <tr>
+                    <td>Cream Cheese & Cucumber</td>
+                    <td>£2.45</td>
+                    <td>£3.35</td>
+                    <td>£4.30</td>
+                  </tr>
+                  <tr>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                  </tr>
+                </table>
+          </div>
+          <div class="house-specials default-hidden" id='house-specials'>
+            <h2 class="menu-title"><u>House Specials</u></h2>
+            <table class="menu-table">
+                <tr>
+                  <th>Filling</th>
+                  <th>Take Away</th>
+                  <th>Eat In</th>
+                </tr>
+                <tr>
+                  <td>Bushfire Baguette</td>
+                  <td>£3.95</td>
+                  <td>£4.95</td>
+                </tr>
+                <tr>
+                  <td>...</td>
+                  <td>...</td>
+                  <td>...</td>
+                </tr>
+              </table>
+          </div>
+        <div class="jackets default-hidden" id='jackets'>
+          <h2 class="menu-title"><u>Jacket Potatoes</u></h2>
+          <table class="menu-table">
+              <tr>
+                <th>Filling</th>
+                <th>Take Away</th>
+                <th>Eat In</th>
+              </tr>
+              <tr>
+                <td>American</td>
+                <td>£3.95</td>
+                <td>£4.95</td>
+              </tr>
+              <tr>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+              </tr>
+            </table>
+      </div>
+      <div class="veggie default-hidden" id='veggie'>
+        <h2 class="menu-title"><u>Veggie</u></h2>
+        <table class="menu-table">
+            <tr>
+              <th>Filling</th>
+              <th>Price</th>
+            </tr>
+            <tr>
+              <td>Curry Egg Mayo Baguette</td>
+              <td>£3.35</td>
+            </tr>
+          </table>
+      </div> 
+      <div class="vegan default-hidden" id='vegan'>
+        <h2 class="menu-title"><u>Vegan</u></h2>
+        <table class="menu-table">
+            <tr>
+              <th>Filling</th>
+              <th>Price</th>
+            </tr>
+            <tr>
+              <td>Vegan Cheese & Pickle Baguette</td>
+              <td>£3.60</td>
+            </tr>
+            <tr>
+              <td>...</td>
+              <td>...</td>
+            </tr>
+          </table>
+      </div>  
+      <div class="shapers default-hidden" id='shapers'>
+        <h2 class="menu-title"><u>Shapers (Low Fat)</u></h2>
+        <table class="menu-table">
+            <tr>
+              <th>Filling</th>
+              <th>Baguette</th>
+              <th>Eat In</th>
+            </tr>
+            <tr>
+              <td>Light Chicken Italienne</td>
+              <td>£3.70</td>
+              <td>£4.70</td>
+            </tr>
+            <tr>
+              <td>...</td>
+              <td>...</td>
+              <td>...</td>
+            </tr>
+          </table>
+      </div>
             <div class="paninis default-hidden" id='paninis'>
                 <h2 class="menu-title"><u>Paninis</u></h2>
                 <table class="menu-table">
@@ -178,8 +325,30 @@
                       <td>£3.90</td>
                       <td>£4.90</td>
                       </tr>
+                      <tr>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                      </tr>
                   </table>
             </div>
+            <div class="drinks default-hidden" id='drinks'>
+              <h2 class="menu-title"><u>Drinks</u></h2>
+              <table class="menu-table">
+                  <tr>
+                    <th>Filling</th>
+                    <th>Price</th>
+                  </tr>
+                  <tr>
+                    <td>Tea</td>
+                    <td>£1.50</td>
+                  </tr>
+                  <tr>
+                    <td>...</td>
+                    <td>...</td>
+                  </tr>
+                </table>
+            </div> 
         </div>
         <br>
         <br>

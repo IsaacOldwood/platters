@@ -24,6 +24,7 @@ body {
     border-bottom: 2px solid black;
     padding-top: 2px;
     padding-bottom: 2px;
+    max-width: 74%;
 }
 
 .menu-title {
