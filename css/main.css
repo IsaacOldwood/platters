@@ -87,3 +87,7 @@ td, th {
     top:1px;
 
 }
+
+.error-header {
+    color: #eb1b22;
+}
