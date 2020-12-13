@@ -19,9 +19,13 @@
                     menuText.style.display = "none";
                 }
 
+                let capitalizedMenu = menu[0].toUpperCase() + menu.slice(1);
+
+                document.title = capitalizedMenu + ' Menu | Platters';
+
                 var x = document.getElementById(menu);
                 x.style.display = "block";
-                var menus = ['traditional', 'chicken', 'maritime', 'cheeseboard', 'house-specials', 'paninis', 'jackets', 'veggie', 'vegan', 'shapers', 'drinks']
+                var menus = ['traditional', 'chicken', 'maritime', 'cheeseboard', 'house-Specials', 'paninis', 'jackets', 'veggie', 'vegan', 'shapers', 'drinks']
                 for (index = 0; index < menus.length; ++index) {
                     if (menus[index] == menu) {
                         show(menus[index]);
@@ -62,7 +66,7 @@
                 <button class="myButton" onclick="showHideAll('chicken')">Chicken</button>
                 <button class="myButton" onclick="showHideAll('maritime')">Maritime</button>
                 <button class="myButton" onclick="showHideAll('cheeseboard')">Cheeseboard</button>
-                <button class="myButton" onclick="showHideAll('house-specials')">House Specials</button>
+                <button class="myButton" onclick="showHideAll('house-Specials')">House Specials</button>
                 <button class="myButton" onclick="showHideAll('veggie')">Veggie</button>
                 <button class="myButton" onclick="showHideAll('vegan')">Vegan</button>
                 <button class="myButton" onclick="showHideAll('shapers')">Shapers</button>
@@ -212,7 +216,7 @@
                   </tr>
                 </table>
           </div>
-          <div class="house-specials default-hidden" id='house-specials'>
+          <div class="house-Specials default-hidden" id='house-Specials'>
             <h2 class="menu-title"><u>House Specials</u></h2>
             <table class="menu-table">
                 <tr>
