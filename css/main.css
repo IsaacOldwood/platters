@@ -71,6 +71,7 @@ p.opening-times {
 @media only screen and (max-device-width: 800px) {
     span.opening-times {
         display: block;
+        padding: 3px 0px;
     }
 }
 
@@ -110,4 +111,9 @@ p.opening-times {
 
 .error-header {
     color: #eb1b22;
+}
+
+.phone {
+    text-decoration: none;
+    color: #34cb3b;
 }
