@@ -126,3 +126,8 @@ p.opening-times {
     text-decoration: none;
     color: #34cb3b;
 }
+
+.about-me-image {
+    border: 3px dashed #eb1b22;
+    margin-top: 50px;
+}
