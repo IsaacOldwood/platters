@@ -3,6 +3,7 @@
     Platters Red #eb1b23
     Neutral white #F6F7F3
     Light red #F95C64
+    Dark #00004d
 */
 
 body {
@@ -127,7 +128,59 @@ p.opening-times {
     color: #34cb3b;
 }
 
-.about-me-image {
+.about-me-image-black {
     border: 3px dashed #eb1b22;
-    margin-top: 50px;
+    margin-top: 40px;
+}
+.about-me-image-white {
+    border: 3px dashed #eb1b22;
+    margin-top: 40px;
+    display: none;
+}
+
+.darkLight {
+	background-color:#f6f7f3;
+	border-radius: 5px;
+	border:1px solid #00004d;
+	display:inline-block;
+	cursor:pointer;
+	color:#00004d;
+	font-family:Georgia;
+	font-size: 25px;
+	padding:4px 0px;
+	text-decoration:none;
+}
+.darkLight:hover {
+    background-color:#00004d;
+    color:#f6f7f3;
+}
+.darkLight:active {
+	position:relative;
+    top:1px;
+}
+
+.lightDark {
+	background-color:#00004d;
+	border-radius: 5px;
+	border:1px solid #f6f7f3;
+	display:inline-block;
+	cursor:pointer;
+	color:#f6f7f3;
+	font-family:Georgia;
+	font-size: 25px;
+	padding:4px 0px;
+    text-decoration:none;
+    display: none;
+}
+.lightDark:hover {
+    background-color:#f6f7f3;
+    color:#00004d;
+}
+.lightDark:active {
+	position:relative;
+    top:1px;
+}
+
+div.hello > h2.menu-title {
+    margin-bottom: 18px;
 }

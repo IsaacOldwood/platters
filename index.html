@@ -56,6 +56,29 @@
                     x.style.display = "none";
                 }
             }
+
+
+            function darkLight(current) {
+              var menuButtons = document.getElementById("menu-buttons");
+              if (current == 'dark') {
+                document.getElementById('darkLight').style.display = 'none';
+                document.getElementById('lightDark').style.display = 'inline-block';
+                document.getElementById('about-me-image-black').style.display = 'none';
+                document.getElementById('about-me-image-white').style.display = 'inline';
+                document.body.style.backgroundColor = '#00004d';
+                menuButtons.style.borderTopColor = "#F6F7F3";
+                menuButtons.style.borderBottomColor = "#F6F7F3";
+              }
+              else {
+                document.getElementById('lightDark').style.display = 'none';
+                document.getElementById('darkLight').style.display = 'inline-block';
+                document.getElementById('about-me-image-white').style.display = 'none';
+                document.getElementById('about-me-image-black').style.display = 'inline';
+                document.body.style.backgroundColor = '#f6f7f3';
+                menuButtons.style.borderTopColor = "black";
+                menuButtons.style.borderBottomColor = "black";
+              }
+            }
         </script>
         <!--JS-->
 	</head>
@@ -70,7 +93,7 @@
           <h1 class="error-header">For our full menu please come in store.</h1>
         </div>
         <div class="centering-container">
-            <div class="menu-buttons">
+            <div class="menu-buttons" id="menu-buttons">
                 <button class="myButton" onclick="showHideAll('traditional')">Traditional</button>
                 <button class="myButton" onclick="showHideAll('chicken')">Chicken</button>
                 <button class="myButton" onclick="showHideAll('maritime')">Maritime</button>
@@ -851,9 +874,13 @@
               <span class="opening-times"> Saturday: 9:30am - 2:45pm &nbsp; &nbsp; </span>  
               <span class="opening-times opening-times-last"> Sunday: Closed </span></span></p>
         </div>
-        <br>
         <div class="centering-container">
-          <a href="https://isaacoldwood.github.io/"><img src="about-me-image-black(600x150).png" class="about-me-image"></a>
+          <button class="darkLight" id="darkLight" onclick="darkLight('dark')">&#9790; Dark Mode &#9789;</button>
+          <button class="lightDark" id="lightDark" onclick="darkLight('light')">&#9788; Light Mode &#9788;</button>
+        </div>
+        <div class="centering-container">
+          <a href="https://isaacoldwood.github.io/"><img src="about-me-image-black(600x150).png" class="about-me-image-black" id="about-me-image-black"></a>
+          <a href="https://isaacoldwood.github.io/"><img src="about-me-image-white(600x150).png" class="about-me-image-white" id="about-me-image-white"></a>
         </div>
 	</body>
 </html><!-- Design and Code By Isaac Oldwood https://isaacoldwood.github.io/ -->
