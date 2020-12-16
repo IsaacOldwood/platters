@@ -131,10 +131,12 @@ p.opening-times {
 .about-me-image-black {
     border: 3px dashed #eb1b22;
     margin-top: 40px;
+    max-width: 700px;
 }
 .about-me-image-white {
     border: 3px dashed #eb1b22;
     margin-top: 40px;
+    max-width: 700px;
     display: none;
 }
 
