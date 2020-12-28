@@ -1,4 +1,4 @@
-# platters
-Platters website mock design
+# Platters
+Platters website
 
-https://plattershuntingdon.github.io/
+https://plattershuntingdon.netlify.app/
