@@ -1,13 +1,881 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8">
-<title>Redirecting to https://plattershuntingdon.github.io/</title>
-<meta http-equiv="refresh" content="0; URL=https://plattershuntingdon.github.io/">
-<link rel="canonical" href="https://plattershuntingdon.github.io/">
+        <!-- link to main stylesheet -->
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+        <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+		    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+		    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <title>Home | Platters</title>
+        <!-- META TAGS-->
+        <meta name = "keywords" content = "Local, Small Buisness, Huntingdon, Sandwich, Platters" />
+        <meta name = "description" content = "Platters is a local buisness producing the finest sandwiches" />
+        <meta name = "revised" content = "Platters, 16/12/2020" />
+        <meta name = "author" content = "Isaac Oldwood" />
+        <meta name="format-detection" content="telephone=no">
+        <!-- META TAGS-->
+        <!--JS-->
+        <script>
+            function showHideAll(menu) {
+                var menuText = document.getElementById('hello');
+                if (menuText.style.display != "none") {
+                    menuText.style.display = "none";
+                }
+
+                let capitalizedMenu = menu[0].toUpperCase() + menu.slice(1);
+
+                document.title = capitalizedMenu + ' Menu | Platters';
+
+                var x = document.getElementById(menu);
+                x.style.display = "block";
+                var menus = ['traditional', 'chicken', 'maritime', 'cheeseboard', 'house-Specials', 'paninis', 'jackets', 'veggie', 'vegan', 'shapers', 'drinks']
+                for (index = 0; index < menus.length; ++index) {
+                    if (menus[index] == menu) {
+                        show(menus[index]);
+                    } else {
+                        hide(menus[index]);
+                    }
+                }
+            }
+
+            function show(menu) {
+                var x = document.getElementById(menu);
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                }
+            }
+            function hide(menu) {
+                var x = document.getElementById(menu);
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                }
+            }
+
+
+            function darkLight(current) {
+              var menuButtons = document.getElementById("menu-buttons");
+              if (current == 'dark') {
+                document.getElementById('darkLight').style.display = 'none';
+                document.getElementById('lightDark').style.display = 'inline-block';
+                document.getElementById('about-me-image-black').style.display = 'none';
+                document.getElementById('about-me-image-white').style.display = 'inline';
+                document.body.style.backgroundColor = '#00004d';
+                menuButtons.style.borderTopColor = "#F6F7F3";
+                menuButtons.style.borderBottomColor = "#F6F7F3";
+              }
+              else {
+                document.getElementById('lightDark').style.display = 'none';
+                document.getElementById('darkLight').style.display = 'inline-block';
+                document.getElementById('about-me-image-white').style.display = 'none';
+                document.getElementById('about-me-image-black').style.display = 'inline';
+                document.body.style.backgroundColor = '#f6f7f3';
+                menuButtons.style.borderTopColor = "black";
+                menuButtons.style.borderBottomColor = "black";
+              }
+            }
+        </script>
+        <!--JS-->
 	</head>
-	<body style="font-size: x-large;">
-    This site is no longer in use. Please use our new website<br>
-		<a href="https://plattershuntingdon.github.io/">https://plattershuntingdon.github.io/</a>
-  </body>
+	<body>
+        <div class="centering-container">
+            <a href="index.html">
+                <img alt="Logo" src="logo.png">
+            </a>
+        </div>
+        <br>
+        <div class="centering-container">
+          <h1 class="error-header">For our full menu please come in store.</h1>
+        </div>
+        <div class="centering-container">
+            <div class="menu-buttons" id="menu-buttons">
+                <button class="myButton" onclick="showHideAll('traditional')">Traditional</button>
+                <button class="myButton" onclick="showHideAll('chicken')">Chicken</button>
+                <button class="myButton" onclick="showHideAll('maritime')">Maritime</button>
+                <button class="myButton" onclick="showHideAll('cheeseboard')">Cheeseboard</button>
+                <button class="myButton" onclick="showHideAll('house-Specials')">House Specials</button>
+                <button class="myButton" onclick="showHideAll('veggie')">Veggie</button>
+                <button class="myButton" onclick="showHideAll('vegan')">Vegan</button>
+                <button class="myButton" onclick="showHideAll('shapers')">Shapers</button>
+                <button class="myButton" onclick="showHideAll('paninis')">Paninis</button>
+                <button class="myButton" onclick="showHideAll('jackets')">Jackets</button>
+                <button class="myButton" onclick="showHideAll('drinks')">Drinks</button>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="centering-container">
+          <div class="hello" id="hello">
+            <h2 class="menu-title">Please Select a Menu<br>or Come in Store</h2>
+          </div>
+        </div>
+        <div class="centering-container">
+            <div class="traditional default-hidden" id="traditional">
+                <h2 class="menu-title"><u>Traditional</u></h2>
+                <table class="menu-table">
+                    <tr>
+                      <th>Filling</th>
+                      <th>Sandwich</th>
+                      <th>Baguette</th>
+                      <th>Eat In</th>
+                    </tr>
+                    <tr>
+                      <td>Bacon</td>
+                      <td>£2.55</td>
+                      <td>£3.45</td>
+                      <td>£4.45</td>
+                    </tr>
+                    <tr>
+                      <td>Sausage</td>
+                      <td>£2.35</td>
+                      <td>£3.25</td>
+                      <td>£4.25</td>
+                    </tr>
+                      <tr>
+                        <td>BLT</td>
+                        <td>£2.65</td>
+                        <td>£3.65</td>
+                        <td>£4.65</td>
+                      </tr>
+                      <tr>
+                        <td class="filling-details">(Bacon, Lettuce & Tomato)</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>Ham & Mustard</td>
+                        <td>£2.45</td>
+                        <td>£3.35</td>
+                        <td>£4.35</td>
+                      </tr>
+                      <tr>
+                        <td>Premium Beef & Horseradish</td>
+                        <td>£2.60</td>
+                        <td>£3.60</td>
+                        <td>£4.60</td>
+                      </tr>
+                      <tr>
+                        <td>Corned Beef & Pickle</td>
+                        <td>£2.35</td>
+                        <td>£3.25</td>
+                        <td>£4.25</td>
+                      </tr>
+                      <tr>
+                        <td>Ham & Cheese</td>
+                        <td>£3.00</td>
+                        <td>£3.85</td>
+                        <td>£4.85</td>
+                      </tr>
+                      <tr>
+                        <td>Turkey & Cranberry</td>
+                        <td>£2.55</td>
+                        <td>£3.45</td>
+                        <td>£4.45</td>
+                      </tr>
+                      <tr>
+                        <td>Egg Mayonnaise</td>
+                        <td>£2.55</td>
+                        <td>£3.45</td>
+                        <td>£4.45</td>
+                      </tr>
+                        <td>Just Salad</td>
+                        <td>£2.20</td>
+                        <td>£2.80</td>
+                        <td>£3.80</td>
+                      </tr>
+                  </table>
+                  <br>
+                  <p class="menu-table">&#9733; Salad Boxes Also Avaliable &#9733;</p>
+            </div>
+            <div class="chicken default-hidden" id='chicken'>
+                <h2 class="menu-title"><u>Chicken</u></h2>
+                <table class="menu-table">
+                    <tr>
+                      <th>Filling</th>
+                      <th>Sandwich</th>
+                      <th>Baguette</th>
+                      <th>Eat In</th>
+                    </tr>
+                    <tr>
+                      <td>Chicken Mayo</td>
+                      <td>£2.65</td>
+                      <td>£3.70</td>
+                      <td>£4.70</td>
+                    </tr>
+                    <tr>
+                      <td class="filling-details">(Seasoned Strips of Chicken Breast)</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Chicken Mexican</td>
+                      <td>£2.65</td>
+                      <td>£3.70</td>
+                      <td>£4.70</td>
+                    </tr>
+                    <tr>
+                      <td class="filling-details">(Hot & Spicy with Kidney Beans)</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Chicken Indian</td>
+                      <td>£2.65</td>
+                      <td>£3.70</td>
+                      <td>£4.70</td>
+                    </tr>
+                    <tr>
+                      <td class="filling-details">(Mild CUrry Mayo)</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Chicken American</td>
+                      <td>£2.65</td>
+                      <td>£3.70</td>
+                      <td>£4.70</td>
+                    </tr>
+                    <tr>
+                      <td class="filling-details">(Sweet & Savoury Pineapple Mayo)</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Chicken Tikka</td>
+                      <td>£2.65</td>
+                      <td>£3.70</td>
+                      <td>£4.70</td>
+                    </tr>
+                    <tr>
+                      <td class="filling-details">(Spicy Tikka Mayo)</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Chicken Sicilian</td>
+                      <td>£3.05</td>
+                      <td>£3.95</td>
+                      <td>£4.95</td>
+                    </tr>
+                    <tr>
+                      <td class="filling-details">(Pesto, Sundried Tomato Olive Oil)</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Chicken Caeser</td>
+                      <td>£3.05</td>
+                      <td>£3.95</td>
+                      <td>£4.95</td>
+                    </tr>
+                    <tr>
+                      <td class="filling-details">(Lettuce, Bacon & Caeser Dressing)</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Chicken Cajun</td>
+                      <td>£3.05</td>
+                      <td>£3.95</td>
+                      <td>£4.95</td>
+                    </tr>
+                    <tr>
+                      <td class="filling-details">(Crunchy, Hot & Spicy)</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </table>
+                  <br>
+                  <p class="menu-table">&#9737; Wraps Also Avaliable &#9737;</p>
+            </div>
+            <div class="maritime default-hidden" id='maritime'>
+                <h2 class="menu-title"><u>Maritime</u></h2>
+                <table class="menu-table">
+                    <tr>
+                      <th>Filling</th>
+                      <th>Sandwich</th>
+                      <th>Baguette</th>
+                      <th>Eat In</th>
+                    </tr>
+                    <tr>
+                      <td>Tuna Mayo & Cucumber</td>
+                      <td>£2.45</td>
+                      <td>£3.35</td>
+                      <td>£4.35</td>
+                    </tr>
+                    <tr>
+                      <td>Seafood Cocktail</td>
+                      <td>£2.55</td>
+                      <td>£3.45</td>
+                      <td>£4.40</td>
+                    </tr>
+                    <tr>
+                      <td class="filling-details">(with Lettuce, Lemon & Black Pepper)</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Prawns in Marie Rose Sauce</td>
+                      <td>£3.20</td>
+                      <td>£4.05</td>
+                      <td>£5.05</td>
+                    </tr>
+                    <tr>
+                      <td class="filling-details">(with Lettuce)</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Chilli Prawns</td>
+                      <td>£3.20</td>
+                      <td>£3.05</td>
+                      <td>£5.05</td>
+                    </tr>
+                    <tr>
+                      <td class="filling-details">(with Lettuce & Hot Chilli Sauce)</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Smoked Salmon & Cream Cheese</td>
+                      <td>£3.20</td>
+                      <td>£3.05</td>
+                      <td>£5.05</td>
+                    </tr>
+                    <tr>
+                      <td class="filling-details">(Deli Delight)</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </table>
+                  <br>
+                  <p class="menu-table">&#10092; Extra Salad +30p &#10093;</p>
+            </div>
+            <div class="cheeseboard default-hidden" id='cheeseboard'>
+              <h2 class="menu-title"><u>Cheeseboard</u></h2>
+              <table class="menu-table">
+                  <tr>
+                    <th>Filling</th>
+                    <th>Sandwich</th>
+                    <th>Baguette</th>
+                    <th>Eat In</th>
+                  </tr>
+                  <tr>
+                    <td>Mild Cheddar</td>
+                    <td>£2.45</td>
+                    <td>£3.35</td>
+                    <td>£4.35</td>
+                  </tr>
+                  <tr>
+                    <td>Cream Cheese & Cucumber</td>
+                    <td>£2.45</td>
+                    <td>£3.35</td>
+                    <td>£4.30</td>
+                  </tr>
+                  <tr>
+                    <td>French Brie & Grape</td>
+                    <td>£2.60</td>
+                    <td>£3.60</td>
+                    <td>£4.60</td>
+                  </tr>
+                  <tr>
+                    <td>Mozzarella & Tomato</td>
+                    <td>£2.60</td>
+                    <td>£3.60</td>
+                    <td>£4.60</td>
+                  </tr>
+                  <tr>
+                    <td>Feta & Red Onion</td>
+                    <td>£2.60</td>
+                    <td>£3.60</td>
+                    <td>£4.60</td>
+                  </tr>
+                </table>
+                <br>
+                <p class="menu-table">&#10072;&nbsp; Coleslaw +40p &nbsp;&#10072;<br>&#10072; Sweetcorn +40p &#10072;</p>
+          </div>
+          <div class="house-Specials default-hidden" id='house-Specials'>
+            <h2 class="menu-title"><u>House Specials</u></h2>
+            <table class="menu-table">
+                <tr>
+                  <th>Filling</th>
+                  <th>Take Away</th>
+                  <th>Eat In</th>
+                </tr>
+                <tr>
+                  <td>Bushfire Baguette</td>
+                  <td>£3.95</td>
+                  <td>£4.95</td>
+                </tr>
+                <tr>
+                  <td class="filling-details">(Indian Chicken, Mango, Chilli Pickle, <br>Chilli Sauce, Onions & Peppers)</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Inferno Baguette</td>
+                  <td>£4.05</td>
+                  <td>£5.05</td>
+                </tr>
+                <tr>
+                  <td class="filling-details">(as above Plus Fresh Chillies)</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Scorcher Melt Ciabatta</td>
+                  <td>£4.00</td>
+                  <td>£5.00</td>
+                </tr>
+                <tr>
+                  <td class="filling-details">(Tuna, Chilli Pickle & Melted Cheese)</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Texan Special Baguette</td>
+                  <td>£3.90</td>
+                  <td>£4.90</td>
+                </tr>
+                <tr>
+                  <td class="filling-details">(Bacon, Hot Salsa & Melted Cheese)</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Ham & Cheese Melt</td>
+                  <td>£3.85</td>
+                  <td>£4.85</td>
+                </tr>
+                <tr>
+                  <td>Tuna Meltdown</td>
+                  <td>£3.85</td>
+                  <td>£4.85</td>
+                </tr>
+                <tr>
+                  <td class="filling-details">(Tuna & Melted Cheese)</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Pepperoni Pizza Ciabatta</td>
+                  <td>£3.90</td>
+                  <td>£4.90</td>
+                </tr>
+                <tr>
+                  <td class="filling-details">(Tomato Sauce, Pepperoni & Melted Cheese)</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Houmous & Roasted Peppers</td>
+                  <td>£3.75</td>
+                  <td>£4.75</td>
+                </tr>
+              </table>
+              <br>
+              <p class="menu-table">&#10092; Extra Salad +30p &#10093;</p>
+          </div>
+        <div class="jackets default-hidden" id='jackets'>
+          <h2 class="menu-title"><u>Jacket Potatoes</u></h2>
+          <table class="menu-table">
+              <tr>
+                <th>Filling</th>
+                <th>Take Away</th>
+                <th>Eat In</th>
+              </tr>
+              <tr>
+                <td>American</td>
+                <td>£3.95</td>
+                <td>£4.95</td>
+              </tr>
+              <tr>
+                <td>Mexican</td>
+                <td>£3.95</td>
+                <td>£4.95</td>
+              </tr>
+              <tr>
+                <td>Indian</td>
+                <td>£3.95</td>
+                <td>£4.95</td>
+              </tr>
+              <tr>
+                <td>Prawns</td>
+                <td>£4.00</td>
+                <td>£5.00</td>
+              </tr>
+              <tr>
+                <td>Cajun</td>
+                <td>£4.00</td>
+                <td>£5.00</td>
+              </tr>
+              <tr>
+                <td>Sicilian</td>
+                <td>£4.00</td>
+                <td>£5.00</td>
+              </tr>
+              <tr>
+                <td>Tuna</td>
+                <td>£3.70</td>
+                <td>£4.70</td>
+              </tr>
+              <tr>
+                <td>Cheese</td>
+                <td>£3.70</td>
+                <td>£4.70</td>
+              </tr>
+              <tr>
+                <td>Beans</td>
+                <td>£3.70</td>
+                <td>£4.70</td>
+              </tr>
+              <tr>
+                <td>Chilli</td>
+                <td>£4.10</td>
+                <td>£5.10</td>
+              </tr>
+              <tr>
+                <td>Cheese & Beans</td>
+                <td>£4.10</td>
+                <td>£5.10</td>
+              </tr>
+            </table>
+            <br>
+            <p class="menu-table">&#10072;&nbsp; Beans, Coleslaw, Sweetcorn, Cheese &nbsp;&#10072;<br>&#10072; Add 40p per portion &#10072;</p>
+      </div>
+      <div class="veggie default-hidden" id='veggie'>
+        <h2 class="menu-title"><u>Veggie</u></h2>
+        <table class="menu-table">
+            <tr>
+              <th>Filling</th>
+              <th>Price</th>
+            </tr>
+            <tr>
+              <td>Curry Egg Mayo Baguette</td>
+              <td>£3.35</td>
+            </tr>
+            <tr>
+              <td>ALT Baguette</td>
+              <td>£3.55</td>
+            </tr>
+            <tr>
+              <td class="filling-details">(Avocado, Lettuce, Tomato & Mayonnaise)</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Cheese & Marmite Baguette</td>
+              <td>£3.35</td>
+            </tr>
+            <tr>
+              <td>Nutella & Banana Panini</td>
+              <td>£3.50</td>
+            </tr>
+            <tr>
+              <td>Peanut Butter Explosion Baguette</td>
+              <td>£3.85</td>
+            </tr>
+            <tr>
+              <td class="filling-details">(Peanut Butter, Chilli Pickle, & Melted Cheese)</td>
+              <td></td>
+            </tr>
+          </table>
+          <br>
+          <p class="menu-table">&#10072; Vegan Coleslaw +40p &#10072;</p>
+      </div> 
+      <div class="vegan default-hidden" id='vegan'>
+        <h2 class="menu-title"><u>Vegan</u></h2>
+        <table class="menu-table">
+            <tr>
+              <th>Filling</th>
+              <th>Price</th>
+            </tr>
+            <tr>
+              <td>Vegan Cheese & Pickle Baguette</td>
+              <td>£3.60</td>
+            </tr>
+            <tr>
+              <td>Houmous & Roasted Peppers Baguette</td>
+              <td>£3.75</td>
+            </tr>
+            <tr>
+              <td>Vegan Bushfire Baguette</td>
+              <td>£3.90</td>
+            </tr>
+            <tr>
+              <td class="filling-details">(Houmous, Chilli Pickle, Chilli Sauce, Onions & Peppers)</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Vegan Inferno Baguette</td>
+              <td>£4.00</td>
+            </tr>
+            <tr>
+              <td class="filling-details">(as above Plus Fresh Chillies)</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Couscous Salad Box</td>
+              <td>£3.60</td>
+            </tr>
+            <tr>
+              <td>Creamy Beetroot Houmous & Crunchy Peppers Wrap</td>
+              <td>£3.95</td>
+            </tr>
+            <tr>
+              <td>Sundried Tomato Butterbean Pate & Salad Baguette</td>
+              <td>£3.95</td>
+            </tr>
+          </table>
+          <br>
+          <p class="menu-table">&#10072; Vegan Coleslaw +40p &#10072;</p>
+      </div>  
+      <div class="shapers default-hidden" id='shapers'>
+        <h2 class="menu-title"><u>Shapers (Low Fat)</u></h2>
+        <table class="menu-table">
+            <tr>
+              <th>Filling</th>
+              <th>Baguette</th>
+              <th>Eat In</th>
+            </tr>
+            <tr>
+              <td>Light Chicken Italienne</td>
+              <td>£3.70</td>
+              <td>£4.70</td>
+            </tr>
+            <tr>
+              <td class="filling-details">(A little red pesto topped with tomatoes)</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Light Chicken Mayo</td>
+              <td>£3.70</td>
+              <td>£4.70</td>
+            </tr>
+            <tr>
+              <td class="filling-details">(Low Fat Mayo)</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Light Chicken Lebanese</td>
+              <td>£3.95</td>
+              <td>£4.95</td>
+            </tr>
+            <tr>
+              <td class="filling-details">(Reduced fat houmous topped with chicken, <br>tomatoes and black pepper)</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Turkey & Cranberry</td>
+              <td>£3.55</td>
+              <td>£4.55</td>
+            </tr>
+            <tr>
+              <td>Turkey Dijon</td>
+              <td>£3.55</td>
+              <td>£4.55</td>
+            </tr>
+            <tr>
+              <td class="filling-details">(Light Dijon Mayo)</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Light Tuna Mayo</td>
+              <td>£3.55</td>
+              <td>£4.55</td>
+            </tr>
+            <tr>
+              <td class="filling-details">(Topped with Baby Gherkins & Red Pepper)</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Smoked Salmon & Light Philadelphia</td>
+              <td>£4.05</td>
+              <td>£5.05</td>
+            </tr>
+            <tr>
+              <td class="filling-details">(with Lemon & Black Pepper)</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Prawns</td>
+              <td>£4.05</td>
+              <td>£5.05</td>
+            </tr>
+            <tr>
+              <td class="filling-details">(with Lettuce & Light Thousand Island Dressing)</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Greek Salad</td>
+              <td>£3.90</td>
+              <td>£4.90</td>
+            </tr>
+            <tr>
+              <td class="filling-details">(Feta, Red Onion & Lettuce with a Vinagerette Dressing)</td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+      </div>
+            <div class="paninis default-hidden" id='paninis'>
+                <h2 class="menu-title"><u>Paninis</u></h2>
+                <table class="menu-table">
+                    <tr>
+                      <th>Filling</th>
+                      <th>Take Away</th>
+                      <th>Eat In</th>
+                    </tr>
+                    <tr>
+                      <td>Brie & Bacon</td>
+                      <td>£4.15</td>
+                      <td>£5.15</td>
+                    </tr>
+                    <tr>
+                      <td>Cheese & Tomato</td>
+                      <td>£3.40</td>
+                      <td>£4.40</td>
+                    </tr>
+                    <tr>
+                      <td>Ham & Cheese</td>
+                      <td>£3.90</td>
+                      <td>£4.90</td>
+                    </tr>
+                    <tr>
+                      <td>Tuna & Cheese</td>
+                      <td>£3.90</td>
+                      <td>£4.90</td>
+                    </tr>
+                    <tr>
+                      <td>Bacon & Cheese</td>
+                      <td>£4.00</td>
+                      <td>£5.00</td>
+                    </tr>
+                    <tr>
+                      <td>Chicken & Cheese</td>
+                      <td>£4.25</td>
+                      <td>£5.25</td>
+                    </tr>
+                    <tr>
+                      <td>Mozzarella & Tomato</td>
+                      <td>£3.65</td>
+                      <td>£4.65</td>
+                    </tr>
+                    <tr>
+                      <td>Sicilian</td>
+                      <td>£4.00</td>
+                      <td>£5.00</td>
+                    </tr>
+                    <tr>
+                      <td>Pepperoni Pizza</td>
+                      <td>£4.05</td>
+                      <td>£5.05</td>
+                    </tr>
+                  </table>
+            </div>
+            <div class="drinks default-hidden" id='drinks'>
+              <h2 class="menu-title"><u>Drinks</u></h2>
+              <table class="menu-table">
+                  <tr>
+                    <th>Filling</th>
+                    <th>Price</th>
+                  </tr>
+                  <tr>
+                    <td>Tea</td>
+                    <td>£1.50</td>
+                  </tr>
+                  <tr>
+                    <td>Regular Coffee</td>
+                    <td>£1.80</td>
+                  </tr>
+                  <tr>
+                    <td>Cappuccino</td>
+                    <td>£2.00</td>
+                  </tr>
+                  <tr>
+                    <td>Caffee Latte</td>
+                    <td>£2.00</td>
+                  </tr>
+                  <tr>
+                    <td>Hot Chocolate</td>
+                    <td>£2.00</td>
+                  </tr>
+                  <tr>
+                    <td>Fresh Smoothies</td>
+                    <td>£2.99</td>
+                  </tr>
+                  <tr>
+                    <td>Frappes</td>
+                    <td>£2.50</td>
+                  </tr>
+                  <tr>
+                    <td class="filling-details">(with or without Coffee)</td>
+                    <td></td>
+                  </tr>
+                </table>
+            </div> 
+        </div>
+        <br>
+        <div class="centering-container">
+            <h2 class="contact-us-title"><u>Contact Us</u></h2>
+            <table class="contact-us-table">
+                <tr>
+                  <th><a href="https://goo.gl/maps/SaFjsLgHmUQ67JsC8" class="address-link">Find Us</a></th>
+                  <th>Phone</th>
+                </tr>
+                <tr>
+                  <td><a href="https://goo.gl/maps/SaFjsLgHmUQ67JsC8" class="address-link">35A High Street</a></td>
+                  <td><a href="tel:01480435535" class="phone">01480 435535</a></td>
+                </tr>
+                <tr>
+                  <td><a href="https://goo.gl/maps/SaFjsLgHmUQ67JsC8" class="address-link">Huntingdon</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td><a href="https://goo.gl/maps/SaFjsLgHmUQ67JsC8" class="address-link">PE29 3AQ</a></td>
+                  <td></td>
+                </tr>
+              </table>
+        </div>
+        <br>
+        <div class="centering-container">
+            <p class="opening-times">
+              <span class="opening-times-2lines">
+              <span class="opening-times opening-times-first"><b>Opening Times:</b> &nbsp;</span> 
+              <span class="opening-times">Monday & Tuesday: 9am - 3pm &nbsp; &nbsp;  </span> 
+              
+              <span class="opening-times"> Wednesday, Thursday & Friday: 9:30am - 3:30pm &nbsp; &nbsp; </span> 
+              </span>
+              <span class="opening-times-2lines">
+              <span class="opening-times"> Saturday: 9:30am - 2:45pm &nbsp; &nbsp; </span>  
+              <span class="opening-times opening-times-last"> Sunday: Closed </span></span></p>
+        </div>
+        <div class="centering-container">
+          <button class="darkLight" id="darkLight" onclick="darkLight('dark')">&#9790; Dark Mode &#9789;</button>
+          <button class="lightDark" id="lightDark" onclick="darkLight('light')">&#9788; Light Mode &#9788;</button>
+        </div>
+        <div class="centering-container">
+          <a href="https://isaacoldwood.github.io/"><img src="about-me-image-black(1500x375).png" class="about-me-image-black" id="about-me-image-black"></a>
+          <a href="https://isaacoldwood.github.io/"><img src="about-me-image-white(1500x375).png" class="about-me-image-white" id="about-me-image-white"></a>
+        </div>
+	</body>
 </html><!-- Design and Code By Isaac Oldwood https://isaacoldwood.github.io/ -->

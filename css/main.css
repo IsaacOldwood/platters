@@ -1,0 +1,193 @@
+/*
+    Platters green #34cb3b
+    Platters Red #eb1b23
+    Neutral white #F6F7F3
+    Light red #F95C64
+    Dark #00004d
+*/
+
+body {
+    background-color: #F6F7F3;
+    color: #34cb3b;
+    font-family: Georgia, serif;
+    font-size: 15px;
+}
+
+.centering-container {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.menu-buttons {
+    display: inline-block;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    max-width: 74%;
+}
+
+@media only screen and (max-device-width: 813px) {
+    .menu-buttons {
+        max-width: 95%;
+    }
+}
+  
+
+.menu-title {
+    font-size: 3em;
+}
+
+.menu-table { 
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2em;
+}
+
+td, th {
+    padding: 2px 5px 2px 5px;
+}
+
+.contact-us-title {
+    font-size: 2.2em;
+}
+
+.contact-us-table {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.7em;
+}
+
+.contact-us-table td, .contact-us-table th {
+    padding: 2px 17px 2px 17px;
+}
+
+table.menu-table th {
+    text-decoration: underline;
+    padding-bottom: 10px;
+}
+
+td.filling-details {
+    font-size: 0.6em;
+}
+
+p.opening-times { 
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.5em;
+}
+
+@media only screen and (max-device-width: 800px) {
+    span.opening-times {
+        display: block;
+        padding: 3px 0px;
+    }
+}
+
+@media only screen and (min-device-width: 800px) and (max-device-width: 1400px) {
+    span.opening-times-2lines {
+        display: block;
+    }
+}
+
+
+.default-hidden {
+    display: none;
+}
+
+.myButton {
+	background-color:#eb1b22;
+	border-radius:13px;
+	display:inline-block;
+	cursor:pointer;
+	color: #F6F7F3;
+	font-family: Georgia, serif;
+    font-size:20px;
+    font-weight:bold;
+	padding:16px 21px;
+    text-decoration:none;
+    display: inline-block;
+}
+.myButton:hover {
+    background-color:#34cb3b;
+    color: #F6F7F3;
+}
+.myButton:active {
+	position:relative;
+    top:1px;
+
+}
+
+.error-header {
+    color: #eb1b22;
+}
+
+.phone {
+    color:inherit;
+    text-decoration:none;
+}
+
+.about-me-image-black {
+    border: 3px dashed #eb1b22;
+    margin-top: 40px;
+    max-width: 700px;
+}
+.about-me-image-white {
+    border: 3px dashed #eb1b22;
+    margin-top: 40px;
+    max-width: 700px;
+    display: none;
+}
+
+.address-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.darkLight {
+	background-color:#f6f7f3;
+	border-radius: 5px;
+	border:1px solid #00004d;
+	display:inline-block;
+	cursor:pointer;
+	color:#00004d;
+	font-family:Georgia;
+	font-size: 25px;
+	padding:4px 0px;
+	text-decoration:none;
+}
+.darkLight:hover {
+    background-color:#00004d;
+    color:#f6f7f3;
+}
+.darkLight:active {
+	position:relative;
+    top:1px;
+}
+
+.lightDark {
+	background-color:#00004d;
+	border-radius: 5px;
+	border:1px solid #f6f7f3;
+	display:inline-block;
+	cursor:pointer;
+	color:#f6f7f3;
+	font-family:Georgia;
+	font-size: 25px;
+	padding:4px 0px;
+    text-decoration:none;
+    display: none;
+}
+.lightDark:hover {
+    background-color:#f6f7f3;
+    color:#00004d;
+}
+.lightDark:active {
+	position:relative;
+    top:1px;
+}
+
+div.hello > h2.menu-title {
+    margin-bottom: 18px;
+}
